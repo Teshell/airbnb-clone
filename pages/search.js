@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 
-const search = ({ searchResults }) => {
+const Search = ({ searchResults }) => {
   const router = useRouter();
 
   console.log(searchResults);
@@ -66,7 +66,7 @@ const search = ({ searchResults }) => {
   );
 };
 
-export default search;
+export default Search;
 
 export async function getServerSideProps(context) {
   const searchResults = await fetch("https://links.papareact.com/isz").then(
