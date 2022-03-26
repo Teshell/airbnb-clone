@@ -5,11 +5,10 @@ import Header from "../components/Header";
 
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 const Search = ({ searchResults }) => {
   const router = useRouter();
-
-  console.log(searchResults);
 
   const { location, startDate, endDate, numberOfGuests } = router.query;
 
@@ -58,6 +57,10 @@ const Search = ({ searchResults }) => {
               )
             )}
           </div>
+        </section>
+
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
 
